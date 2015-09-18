@@ -1,0 +1,25 @@
+﻿<Window x:Class="CDC_3000.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CDC 3000" Height="350" Width="525" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid Name="TimerGrid" Background="Black" MouseDown="BackgroundSelected">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0" x:Name="HourColumn" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0" x:Name="SecondsColumn" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Margin="4" VerticalAlignment="Stretch" Height="Auto">
+            <TextBlock Name="Hours" TextAlignment="Right" VerticalAlignment="Center" Text="" FontSize="100" FontStyle="Normal" Foreground="White" Opacity="1.0" Grid.Column="0"></TextBlock>
+        </Viewbox>
+        
+        <Viewbox Margin="4" VerticalAlignment="Stretch" Height="Auto" Grid.Column="1">
+            <TextBlock Name="Minutes" TextAlignment="Center" VerticalAlignment="Center" Text="Right-Click for Settings" FontSize="100" FontStyle="Normal" Foreground="White" Opacity="1.0" Grid.Column="1"></TextBlock>
+        </Viewbox>
+        <Viewbox Margin="4" VerticalAlignment="Stretch" Height="Auto" Grid.Column="2">
+            <TextBlock Name="Seconds" TextAlignment="Left" VerticalAlignment="Center" Text="" FontSize="100" FontStyle="Normal" Foreground="White" Opacity="1.0" Grid.Column="2"></TextBlock>
+        </Viewbox>
+    </Grid>
+</Window>
